@@ -1,0 +1,51 @@
+/* tasklist.css */
+
+/* General Styling */
+body {
+    background-color: #f9fafc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  .task-list {
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 95%; /* Make task list wider */
+    max-width: 1400px; /* Increase max-width */
+    list-style-type: none;
+    overflow: hidden;
+  }
+  
+  .task-list li {
+    margin-bottom: 15px;
+  }
+  
+  .task-list::before {
+    content: '';
+    display: block;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #007bff;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .task-list-empty {
+    text-align: center;
+    font-size: 18px;
+    color: #6c757d;
+    margin-top: 50px;
+    font-weight: 500;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .task-list {
+      width: 100%; /* Full width on tablets */
+      max-width: 100%;
+    }
+  }
+  

@@ -1,0 +1,147 @@
+/* taskitem.css */
+
+.task-item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin: 10px auto;
+  background: linear-gradient(135deg, #ffffff, #f0f4f8);
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%; /*Make task item full width of the parent */
+  max-width: 1200px; /* Increase max-width */
+  overflow: hidden;
+}
+
+.task-item:hover {
+  transform: translateY(-3px);
+}
+
+.task-item.completed {
+  background-color: #d1e7dd;
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.task-desc {
+  flex-grow: 1;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin-right: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.task-item.completed .task-desc {
+  color: #999;
+}
+
+.task-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  margin-right: 10px;
+  transition: border-color 0.3s ease;
+  overflow: hidden;
+}
+
+.task-input:focus {
+  border-color: #0056b3;
+}
+
+button {
+  padding: 8px 12px;
+  margin-right: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+.save-btn {
+  background-color: #28a745;
+}
+
+.save-btn:hover {
+  background-color: #218838;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.complete-btn {
+  background-color: #007bff;
+}
+
+.complete-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .task-item {
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+
+  .task-desc,
+  .task-input {
+    font-size: 16px;
+  }
+
+  button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-item button {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .task-input,
+  .task-desc {
+    width: 100%;
+    font-size: 14px;
+    white-space: normal;
+  }
+}
